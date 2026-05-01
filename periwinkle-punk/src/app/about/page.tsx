@@ -1,4 +1,4 @@
-import { Mail, MapPin, Coffee } from "lucide-react";
+import { Mail, MapPin, Coffee, BookOpen } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -15,24 +15,22 @@ export default function AboutPage() {
           </div>
 
           {/* Quick Info / Quaint Details */}
-          <div className="grid grid-cols-2 gap-6 p-8 rounded-2xl bg-cream dark:bg-black border border-periwinkle/20 shadow-sm">
-            <div className="flex items-center gap-3 opacity-70">
-              <MapPin size={18} className="text-berry-brown dark:text-periwinkle" />
-              <span className="text-sm font-serif">Portland, OR</span>
-            </div>
-            <div className="flex items-center gap-3 opacity-70">
-              <Coffee size={18} className="text-berry-brown dark:text-periwinkle" />
-              <span className="text-sm font-serif">Earl Grey Enthusiast</span>
-            </div>
-            <div className="flex items-center gap-3 opacity-70">
-              <Mail size={18} className="text-berry-brown dark:text-periwinkle" />
-              <span className="text-sm font-serif">@cristinaochoa</span>
-            </div>
-            <div className="flex items-center gap-3 opacity-70">
-              <Mail size={18} className="text-berry-brown dark:text-periwinkle" />
-              <span className="text-sm font-serif">Say Hello</span>
-            </div>
+          {/* Update the Quick Info grid items */}
+          <div className="grid grid-cols-2 gap-6 p-8 rounded-2xl bg-black/50 dark:bg-black/50 border border-periwinkle/20 shadow-sm">
+            {[
+              { Icon: MapPin, text: "Knoxville, TN" },
+              { Icon: Coffee, text: "Mocha Latte Enthusiast" },
+              { Icon: BookOpen, text: "Substack @theperiwinklepunk" },
+              { Icon: Mail, text: "Email: theperiwinklepunk@gmail.com" }
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 text-berry-brown dark:text-periwinkle font-medium">
+                <item.Icon size={18} />
+                <span className="text-sm font-serif">{item.text}</span>
+              </div>
+            ))}
           </div>
+
+
         </div>
 
         {/* Narrative Column - Storytelling Text */}

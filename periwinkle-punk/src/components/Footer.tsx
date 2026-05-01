@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, BookOpen } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -6,16 +6,16 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center space-y-6">
         <div className="flex space-x-8">
           <a 
-            href="https://instagram.com" 
+            href="https://www.substack.com/@theperiwinklepunk" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hover:text-berry-brown dark:hover:text-periwinkle transition-colors"
-            aria-label="Instagram"
+            aria-label="Substack"
           >
-            <Mail size={24} />
+            <BookOpen size={24} />
           </a>
           <a 
-            href="mailto:cristina@example.com" 
+            href="theperiwinklepunk@gmail.com" 
             className="hover:text-berry-brown dark:hover:text-periwinkle transition-colors"
             aria-label="Email"
           >

@@ -66,18 +66,12 @@ export default function MoodboardPage() {
         <h1 className="text-4xl md:text-6xl font-serif text-berry-brown dark:text-periwinkle">The Moodboard</h1>
       </div>
 
-      {/* 
-          Main Chat Container 
-          - min-h-[600px]: Ensures it's never too "squished"
-          - max-h-[75vh]: Ensures it doesn't grow forever
-          - flex-grow: Fills available space if the screen is large
-      */}
       <div className="flex flex-col bg-white dark:bg-black/40 border border-periwinkle/20 rounded-[2.5rem] overflow-hidden shadow-2xl backdrop-blur-sm relative min-h-[600px] max-h-[75vh] w-full mx-auto">
         
         {/* Messages Area - The Scrollable Zone */}
         <div 
           ref={scrollRef}
-          className="flex-grow overflow-y-auto p-8 md:p-12 space-y-10 scroll-smooth"
+          className="flex-grow overflow-y-auto p-8 md:p-12 space-y-10 scroll-smooth bg-white dark:bg-black/40"
         >
           {messages.map((msg) => (
             <div 
@@ -103,7 +97,7 @@ export default function MoodboardPage() {
           ))}
 
           {isTyping && (
-            <div className="flex items-center gap-3 p-4 text-periwinkle animate-pulse">
+            <div className="flex items-center gap-3 p-4 text-cream animate-pulse">
               <div className="w-2.5 h-2.5 rounded-full bg-current"></div>
               <div className="w-2.5 h-2.5 rounded-full bg-current delay-75"></div>
               <div className="w-2.5 h-2.5 rounded-full bg-current delay-150"></div>
@@ -123,7 +117,7 @@ export default function MoodboardPage() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="How are you feeling today?"
-              className="w-full pl-8 pr-20 py-5 rounded-full bg-white dark:bg-black border-2 border-periwinkle/20 focus:outline-none focus:border-berry-brown dark:focus:border-periwinkle transition-all shadow-inner text-lg font-serif"
+              className="w-full pl-8 pr-20 py-5 rounded-full text-white bg-black dark:bg-black border-2 border-periwinkle/20 focus:outline-none focus:border-berry-brown dark:focus:border-periwinkle transition-all shadow-inner text-lg font-serif"
             />
             <button 
               type="submit"

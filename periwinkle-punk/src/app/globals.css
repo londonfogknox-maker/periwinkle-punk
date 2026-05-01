@@ -9,7 +9,7 @@
   --color-cream: #fff9ed;
   --color-black: #1a1a1a;
   --color-white: #ffffff;
-  --color-periwinkle: #ccccff;
+  --color-periwinkle: #a3a3ff;
 
   /* Book-like font stack */
   --font-serif: "Charter", "Bitstream Charter", "Sitka Text", "Cambria", serif;
@@ -23,7 +23,7 @@
   --secondary: var(--color-periwinkle);
 }
 
-[data-theme='dark'] {
+:root.dark {
   --background: var(--color-black);
   --foreground: var(--color-cream);
   --primary: var(--color-periwinkle);
